@@ -1,5 +1,5 @@
-import { Player } from "/js/player.js";
-import { Scoreboard} from "/js/scoreboard.js";
+import { Player } from "./player.js";
+import { Scoreboard} from "./scoreboard.js";
 
 // Add one event listener that covers the whole game board
 document.querySelector('.game-board').addEventListener("click", (event) => {
