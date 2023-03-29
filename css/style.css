@@ -62,7 +62,6 @@ player {
 }
 
 .game {
-    background-image: repeating-linear-gradient(brown, white 5%);
     align-content: center;
 }
 
@@ -73,6 +72,12 @@ h2 {
 }
 
 .game-board {
+    background-color: #b7988a;
+    opacity: 0.8;
+    background-image:  repeating-linear-gradient(45deg, #7e4226 25%, transparent 25%, transparent 75%, #7e4226 75%, #7e4226), repeating-linear-gradient(45deg, #7e4226 25%, #b7988a 25%, #b7988a 75%, #7e4226 75%, #7e4226);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;    
+    padding: 0.25rem;
     min-width: 300px;
     min-height: 300px;
     max-height: 80vh; 
