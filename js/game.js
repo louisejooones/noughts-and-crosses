@@ -1,3 +1,6 @@
+import { Player } from "player.js";
+import { Scoreboard} from "scoreboard.js";
+
 // Add one event listener that covers the whole game board
 document.querySelector('.game-board').addEventListener("click", (event) => {
     // Check whether you clicked on the div or a button

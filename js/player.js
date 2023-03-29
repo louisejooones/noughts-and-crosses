@@ -5,4 +5,6 @@ class Player {
         this.losses = 0;
         this.draws = 0;
     }
-}
+};
+
+export { Player };
