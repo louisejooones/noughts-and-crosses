@@ -1,0 +1,98 @@
+@media screen and (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+
+    .game, player {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    background: #f6f666;
+    text-align: center;
+    padding: 5px;
+}
+
+nav {
+    background: lightgreen;
+    margin: 0px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    width: 90px;
+    align-self: center;
+}
+
+main {
+    background: #d3d3d3;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main > * {
+    padding: 10px;
+}
+
+player {
+    min-width: 200px; 
+    background: lightpink;
+}
+
+.game {
+    background-image: repeating-linear-gradient(brown, white 5%);
+    align-content: center;
+}
+
+h2 {
+    margin: 10px 0;
+    text-align: center;
+    background: white;
+}
+
+.game-board {
+    min-width: 300px;
+    min-height: 300px;
+    max-height: 80vh; 
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.25rem;
+}
+
+.game-square {
+    background-image: url('https://images.unsplash.com/photo-1589496933738-f5c27bc146e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+button {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 1rem 2rem;
+  }
