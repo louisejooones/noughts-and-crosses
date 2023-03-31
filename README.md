@@ -141,10 +141,23 @@ ___
 > Team dynamics/ Project management
 > Tools/Tech you used
 
-
-
-
-
+Toggling the class list!
+        // // if the player's name matches the current player's name
+        // if (player.name === scoreboard.currentPlayer.name) {
+        //     document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-stats > h3`).classList.add('hidden');
+        //     document.querySelector(`#${scoreboard.otherPlayer.playerNumber}-stats > h3`).classList.remove('hidden');
+        // }
+        // else {
+        //     document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-stats > h3`).classList.remove('hidden');
+        //     document.querySelector(`#${scoreboard.otherPlayer.playerNumber}-stats > h3`).classList.add('hidden');
+        // }
+```js
+function showTurn() {
+    players.forEach(function(player) {
+        document.querySelector(`#${player.playerNumber}-turn`).classList.toggle('hidden');
+    })
+}
+```
 ___
 ## Wins
 
@@ -157,7 +170,7 @@ ___
 > Collaboration with other team members
 > Visual design of the project
 
-
+- My game logic
 
 
 ___

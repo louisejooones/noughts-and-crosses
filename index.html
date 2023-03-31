@@ -22,11 +22,26 @@
         </nav>
     </header>
     <main>
-        <player class="player-one">
-            Player 1
-        </player>
-        <section class="game">
-            <h2>Game</h2>
+        <section class="player" id="player1">
+            <form class="player-form" id="player1-form">
+                <label for="player1-name">What's your name?</label>
+                <input type="text" id="player1-name" placeholder="Player 1's name" required/>
+                <p>What type of game do you want to play?</p>
+                <input type="radio" id="single" name="game-type" value=1>
+                <label for="single">Single Player</label><br>
+                <input type="radio" id="two" name="game-type" value=2 checked>
+                <label for="two">Two Player</label><br>
+                <button id="player1-submit" type="submit">Let's go!</button>
+            </form>
+            <div class="stats" id="player1-stats">
+                <h1 class="player-name hidden">Player 1</h1>
+                <h3 class="turn hidden" id="player1-turn">Your turn!</h3>
+                <p class="game-stats hidden" id="player1-game-stats">
+                    Wins: 0<br>Losses: 0<br>Draws: 0
+                </p>
+            </div>
+        </section>
+        <section class="game hidden">
             <div class="game-board">
                 <button class="game-square"></button>
                 <button class="game-square"></button>
@@ -38,13 +53,31 @@
                 <button class="game-square"></button>
                 <button class="game-square"></button>
             </div>
+            <div class="reset hidden">
+                <p class="outcome">Outcome message</p>
+                <button class="reset-button">Play again?</button>
+            </div>
         </section>
-        <player class="player-two">
-            Player 2
-        </player>
+        <section class="player" id="player2">
+            <div class="stats" id="player2-stats">
+                <h1 class="player-name hidden">Player 2</h1>
+                <h3 class="turn hidden" id="player2-turn">Your turn!</h3>
+                <p class="game-stats hidden" id="player2-game-stats">
+                    Wins: 0<br>Losses: 0<br>Draws: 0
+                </p>
+            </div>
+            <form class="player-form hidden" id="player2-form">
+                <label for="player2-name">What's your name?</label>
+                <input type="text" id="player2-name" placeholder="Player 2's name" required/>
+                <button id="player2-submit" type="submit">Let's go!</button>
+            </form>
+        </section>
     </main>
     <footer>
         &copy; Louise Jones 2023
-    </footer>
+        <a href="https://www.freepik.com/free-vector/farm-scene-nature-with-barn_5769442.htm#query=cartoon%20farm&position=0&from_view=keyword&track=ais">Image by brgfx</a> on Freepik
+        <a href="https://www.freepik.com/free-vector/natural-environment-lanscape-scene_5072764.htm#query=field&position=22&from_view=search&track=sph">Image by brgfx</a> on Freepik
+        Image by <a href="https://www.freepik.com/free-vector/hand-drawn-spring-wallpaper_12151052.htm#query=grass&position=30&from_view=search&track=sph">Freepik</a>
+        <a href="https://www.freepik.com/free-vector/green-garden-frame-background-with-copyspace_4607345.htm#query=grass%20birds%20eye%20view&position=1&from_view=keyword&track=ais">Image by brgfx</a> on Freepik    </footer>
 </body>
 </html>
