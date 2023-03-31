@@ -1,8 +1,10 @@
 class Scoreboard {
     constructor() {
-        this.firstPlayer = 0;
-        this.secondPlayer = 0;
-        this.currentPlayer = this.firstPlayer;
+        this.currentPlayer = "";
+        this.otherPlayer = "";
+        this.winner = "";
+        this.draw = "";
+        this.turnNumber = 0;
     }
 }
 
