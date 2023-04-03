@@ -43,7 +43,7 @@ document.querySelector('#player1-submit').addEventListener('click', function(eve
     // Hide the Player 1 form
     document.querySelector('#player1-form').classList.add('hidden');
     // Show Player 1's stats
-    let player1info = document.querySelectorAll('#player1-stats > h1, #player1-game-stats')
+    let player1info = document.querySelectorAll('#player1-stats > h2, #player1-game-stats')
     player1info.forEach((stat) => stat.classList.remove('hidden'));
     // Open 1player or 2player mode
     if (document.querySelector('input[name="game-type"]:checked').value === '2') {
@@ -71,7 +71,7 @@ document.querySelector('#player2-submit').addEventListener('click', function(eve
     // Hide player 2 form
     document.querySelector('#player2-form').classList.add('hidden');
     // Show Player 2's stats
-    let player2info = document.querySelectorAll('#player2-stats > h1, p')
+    let player2info = document.querySelectorAll('#player2-stats > h2, p')
     player2info.forEach((stat) => stat.classList.remove('hidden'));
     resetGame();
 });
@@ -151,7 +151,7 @@ function isItOverYet(player) {
         document.querySelector('.reset > .outcome').innerText = 
             `${player.name} wins and
             ${scoreboard.otherPlayer.name} loses.
-            
+
             Want to play again?`;
         scoreboard.currentPlayer.wins++;
         scoreboard.otherPlayer.losses++;

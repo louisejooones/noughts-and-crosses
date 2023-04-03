@@ -119,6 +119,11 @@ form {
     text-align: center;
 }
 
+.player-form label[for="single"],
+.player-form label[for="two"] {
+    font-weight: 6px;
+}
+
 .stats {
     grid-area: 2 / 1;
 }

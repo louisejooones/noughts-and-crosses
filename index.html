@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noughts and Crosses</title>
-    <link rel="icon" sizes="any" href="favicon.ico"/>
+    <link rel="icon" sizes="any" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/style.css"/>
-    <script defer src="js/game.js" type="module"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/game.js" type="module"></script>
     <script src="https://kit.fontawesome.com/786fe5a83c.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -37,7 +37,7 @@
         <section class="player" id="player1">
             <form class="player-form" id="player1-form">
                 <label for="player1-name">Who are you?</label>
-                <input type="text" id="player1-name" name="player1-name" placeholder="Player 1's name" required />
+                <input type="text" id="player1-name" name="player1-name" placeholder="Player 1's name" required>
                 <p>Mode</p>
                 <input type="radio" id="single" name="game-type" value=1>
                 <label for="single">One Player</label><br>
@@ -46,7 +46,7 @@
                 <button id="player1-submit" type="submit">Let's go!</button>
             </form>
             <div class="stats" id="player1-stats">
-                <h1 class="player-name hidden">Player 1</h1>
+                <h2 class="player-name hidden">Player 1</h2>
                 <h3 class="turn hidden" id="player1-turn">Your turn!</h3>
                 <p class="game-stats hidden" id="player1-game-stats">
                     0 wins<br>0 losses<br>0 draws
@@ -72,7 +72,7 @@
         </section>
         <section class="player" id="player2">
             <div class="stats" id="player2-stats">
-                <h1 class="player-name hidden">Player 2</h1>
+                <h2 class="player-name hidden">Player 2</h2>
                 <h3 class="turn hidden" id="player2-turn">Your turn!</h3>
                 <p class="game-stats hidden" id="player2-game-stats">
                     0 wins<br>0 losses<br>0 draws
@@ -80,7 +80,7 @@
             </div>
             <form class="player-form hidden" id="player2-form">
                 <label for="player2-name">What's your name?</label>
-                <input type="text" id="player2-name" placeholder="Player 2's name" required />
+                <input type="text" id="player2-name" placeholder="Player 2's name" required>
                 <button id="player2-submit" type="submit">Let's go!</button>
             </form>
         </section>
