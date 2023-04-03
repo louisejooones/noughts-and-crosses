@@ -45,6 +45,8 @@ document.querySelector('#player1-submit').addEventListener('click', function(eve
     // Show Player 1's stats
     let player1info = document.querySelectorAll('#player1-stats > h2, #player1-game-stats')
     player1info.forEach((stat) => stat.classList.remove('hidden'));
+    // Show Player 2 section
+    document.querySelector('#player2').classList.remove('hidden');
     // Open 1player or 2player mode
     if (document.querySelector('input[name="game-type"]:checked').value === '2') {
         // Start 2 player mode
@@ -181,7 +183,6 @@ document.querySelector('.game-board').addEventListener('click', (event) => {
     if (event.target.classList.contains('game-square')) {
         // Check there isn't already something in the square
         if (event.target.classList.contains('empty')) {
-
             // Change the square to the current player's icon
             event.target.innerText = (scoreboard.currentPlayer.icon);
             event.target.classList.remove('empty');

@@ -39,7 +39,7 @@
                 <label for="player1-name">Who are you?</label>
                 <input type="text" id="player1-name" name="player1-name" placeholder="Player 1's name" required>
                 <p>Mode</p>
-                <input type="radio" id="single" name="game-type" value=1>
+                <input type="radio" id="single" name="game-type" value=1 disabled>
                 <label for="single">One Player</label><br>
                 <input type="radio" id="two" name="game-type" value=2 checked>
                 <label for="two">Two Player</label><br>
@@ -70,7 +70,7 @@
                 <button class="reset-button">Let's go!</button>
             </div>
         </section>
-        <section class="player" id="player2">
+        <section class="player hidden" id="player2">
             <div class="stats" id="player2-stats">
                 <h2 class="player-name hidden">Player 2</h2>
                 <h3 class="turn hidden" id="player2-turn">Your turn!</h3>
