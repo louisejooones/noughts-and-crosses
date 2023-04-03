@@ -1,42 +1,26 @@
 # noughts-and-crosses
 
-This repo contains the source code for the first project of General Assembly's Software Engineering Immersive course (March 13th - June 9th 2023). 
+This repo contains the source code for my first project of General Assembly's Software Engineering Immersive course (March 13th - June 9th 2023). 
 
 We are at the end of Unit 1: Frontend Fundamentals, so the project focuses on HTML, CSS and JavaScript.
+
+Project 1 runs from 29th March - 3rd April (4 working days) and is an independent project.
 
 ___
 
 ## Deployment link
 
-> Here include the information on where the deployed project can be found. If login details are needed to access the full project, make sure you include them.
-
-Github pages: link TBC
-
-___
-## Getting Started/Code Installation
-
-> Explain how the reader accesses your code. Include a step by step approach.
-
-
-
-
-
-
-____
-## Timeframe & Working Team (Solo)
-
-Project 1 runs from 29th March - 4th April (5 working days) and is an independent project.
+Github pages: https://louisejones94.github.io/noughts-and-crosses/
 
 
 ___
 ## Technologies Used
 
-> List every technology you used to complete the project. This can be in one long list, or broken down into categories (Back End, Front End, Development Tools).
-
 - HTML
 - CSS
 - JavaScript
-
+- VS Code
+- Chrome developer tools
 
 
 
@@ -65,16 +49,13 @@ Your Noughts and Crosses app must:
 - Use **semantic markup** for HTML and CSS (adhere to best practices)
 - Have well-formatted, and well-commented code
 
-Link to full brief: https://git.generalassemb.ly/SEI-LND-71/Project-1
+### Full Brief
+
+Found at https://git.generalassemb.ly/SEI-LND-71/Project-1
 
 
 ___
 ## Planning
-
-> The planning stage is important, as all projects in your future roles will have detailed plans before any coding happens. It is a great experience to share with potential engineer employers, as this reflects real engineering team practices. 
-
-> Any ERDs? Same here, explain and include images.
-
 
 ### User Stories
 
@@ -86,23 +67,11 @@ ___
 - As a user, I should not be able to continue playing once I win, lose, or tie
 - As a user, I should be able to play the game again without refreshing the page
 
-### Sketches
-> Did you do any sketches? If so, discuss this and include images.
+### Wireframe
 
-### Wireframes
-> Any wireframes of the front end and UI? You did? Then explain this and include images.
 
 ### Project Management
-> Use a project management tool to plan the sprint? If so, talk through this - what tool did you use? How you allocated tickets/responsibilities, sprint timeline etc. Also include screenshots of this.
-
-Trello board link: https://trello.com/b/myM3qWxN
-Power Automate template to convert trello cards to Microsoft To-Do items: TBC
-
-### Pseudocode
-> Any pseudocode? 
-
-
-
+I used this [Trello board](https://trello.com/b/myM3qWxN) to list out different features, order them in terms of priority then set up each day's work to make sure I was moving through the content at enough pace.
 
 
 
@@ -120,7 +89,11 @@ ___
 > Some people will document the build/code process by discussing the key stages they worked on. Others will do a day by day guide. It’s entirely up to you how you structure this, as long as you discuss all the key things above.
 
 ### 
-
+- First things first, holy grail layout
+- Then, basic board layout
+- Started with classes for players and the game itself (Scoreboard)
+- Centred work around the game.js file
+- Functions for each repeated step
 
 
 
@@ -158,6 +131,10 @@ function showTurn() {
     })
 }
 ```
+
+- Feeling the urge to jump straight in and start coding
+- Trying to choose which bonus exercises to work through / comparing myself to others
+
 ___
 ## Wins
 
@@ -187,6 +164,7 @@ ___
 > What Technologies/Tools do you now feel more confident with? Tell them specifically what you learnt about these. 
 > What engineering processes did you become more comfortable with? Standups? Pair programming? Project management? Tell them what you learnt from these processes?
 
+- Flexbox: I went into this project seeing Flexbox as my nemesis. Much like when I learnt to drive, I thought "I'm just not suited to this, I'll never find this easy". And much like driving, I don't find it easy as such, but I can find myself doing a good job whilst on autopilot. Here, I noticed myself centring the Game Outcome message using Flexbox without looking it up, and getting the right result first time.
 - Debugging
 - Stepping away from a problem
 - Sketching out logical processes
@@ -197,22 +175,12 @@ ___
 ___
 ## Bugs
 
-> If you have any bugs in your project, it’s important that you flag them in your ReadMe. This helps the engineers reviewing your projects to understand that you are aware that there are issues - if you don’t flag these, then they won’t have that visibility that you know these problems are in your code and it can result in them not having a full understanding of your technical knowledge. 
-> 
-> In either sentences or bullets, explain what the bugs are.
-> 
-> If you have no bugs, you can leave this section blank.
-
 - Favicon compatibility: iOS Safari and classic desktop browsers are covered, but Android Chrome and Edge/IE12 require different formats that I haven't yet added.
 
 
 ___
 ## Future Improvements
 
-> It’s common to get to the end of your project and have ideas on what you would do if you have more time, as well as how you might improve it. 
-> 
-> If you do, you should detail this here. It’s great to give that context on potential future improvements, to share your creative or technical ideas with the engineers reading your ReadMes.
-> 
-> In either sentences or bullets, explain what your future improvements would be.
-
-
+- Allow players to customize their tokens (specifically, choosing their flower colours)
+- Use localStorage to persist data locally to allow games to continue after page refresh or loss of internet connectivity
+- Create an unbeatable AI opponent
