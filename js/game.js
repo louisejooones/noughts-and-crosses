@@ -1,5 +1,6 @@
 import { Player } from "./player.js";
 import { Scoreboard } from "./scoreboard.js";
+import { changeAudio } from "./audio.js";
 
 // Initialise players
 let player1 = new Player('', 'X', 'player1');
@@ -10,6 +11,15 @@ let scoreboard = new Scoreboard();
 
 // Array of all the squares from the parent node
 let squares = Array.from(document.querySelector('.game-board').children);
+
+// Controls for audio
+document.querySelector('#summer-audio').volume = 0;
+document.querySelector('.audio-control').addEventListener('click', (event) => {
+    event.preventDefault();
+    changeAudio(event);
+});
+
+
 
 // Event listener for first player form
 document.querySelector('#player1-submit').addEventListener('click', function(event) {
@@ -60,17 +70,6 @@ let players = [player1, player2];
 // Function to show whose turn it is
 function showTurn() {
     players.forEach(function(player) {
-        // console.log()
-        // console.log(player.playerNumber, player.name, scoreboard.currentPlayer.name);
-        // // if the player's name matches the current player's name
-        // if (player.name === scoreboard.currentPlayer.name) {
-        //     document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-stats > h3`).classList.add('hidden');
-        //     document.querySelector(`#${scoreboard.otherPlayer.playerNumber}-stats > h3`).classList.remove('hidden');
-        // }
-        // else {
-        //     document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-stats > h3`).classList.remove('hidden');
-        //     document.querySelector(`#${scoreboard.otherPlayer.playerNumber}-stats > h3`).classList.add('hidden');
-        // }
         document.querySelector(`#${player.playerNumber}-turn`).classList.toggle('hidden');
     })
 }

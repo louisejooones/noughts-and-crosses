@@ -56,14 +56,23 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 li {
-    width: 90px;
-    align-self: center;
+    width: 10%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+i {
+    font-size: 20px;
 }
 
 main {
@@ -89,10 +98,6 @@ header h1 {
     margin:10px;
     padding:0;
     color: white
-}
-
-a {
-    color:white;
 }
 
 .player {

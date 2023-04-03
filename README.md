@@ -187,7 +187,9 @@ ___
 > What Technologies/Tools do you now feel more confident with? Tell them specifically what you learnt about these. 
 > What engineering processes did you become more comfortable with? Standups? Pair programming? Project management? Tell them what you learnt from these processes?
 
-
+- Debugging
+- Stepping away from a problem
+- Sketching out logical processes
 
 
 
