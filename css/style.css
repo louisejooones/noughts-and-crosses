@@ -45,7 +45,7 @@ header, footer {
 }
 
 footer {
-    font-size: 5px;
+    font-size: 8px;
 }
 
 nav {
@@ -64,7 +64,7 @@ ul {
 }
 
 li {
-    width: 10%;
+    width: 15%;
 }
 
 a {
@@ -92,8 +92,7 @@ main > * {
     padding: 10px;
 }
 
-header h1 {
-    font-family: 'Press Start 2P', sans-serif;
+h1 {
     font-weight: 12;
     font-size: 50px;
     margin:10px;
@@ -148,6 +147,8 @@ form {
     align-items: center;
     justify-items: center;
     height: 400px;
+    padding: 0;
+    margin: 5px;
 }
 
 h2 {
@@ -201,7 +202,6 @@ h2 {
     color: #fff;
     background-color: #333;
     padding: 5px;
-    /* margin: 2rem 0 0 0; */
     position: relative;
     z-index: 4;
     text-align: center;
@@ -217,6 +217,14 @@ h2 {
         flex-direction: column;
     }
 
+    li {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
     .game {
         width: 100%;
         max-width: 300px;
@@ -228,9 +236,11 @@ h2 {
         grid-template-rows: 150px;;
         grid-template-columns: 1fr 5fr 1fr;
         align-items: center;
-        padding: 5px 10px;
+        padding: 5px 0;
         height: 150px;
         width: 300px;
+        margin: 5px;
+        font-size: 10px;;
     }
 
     form {
