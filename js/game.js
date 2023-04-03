@@ -151,6 +151,7 @@ function isItOverYet(player) {
         document.querySelector('.reset > .outcome').innerText = 
             `${player.name} wins and
             ${scoreboard.otherPlayer.name} loses.
+            
             Want to play again?`;
         scoreboard.currentPlayer.wins++;
         scoreboard.otherPlayer.losses++;
@@ -163,6 +164,7 @@ function isItOverYet(player) {
         scoreboard.otherPlayer.draws++;
         document.querySelector('.reset > .outcome').innerText = 
             `It's a draw!
+
             Want to play again?`;
     }
 }
