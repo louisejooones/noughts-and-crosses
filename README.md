@@ -203,7 +203,7 @@ ___
 > 
 > If you have no bugs, you can leave this section blank.
 
-- Favicon compatibility: iOS Safari and classic desktop browsers are covered, but Android Chrome and Edge/IE12 require different formats.
+- Favicon compatibility: iOS Safari and classic desktop browsers are covered, but Android Chrome and Edge/IE12 require different formats that I haven't yet added.
 
 
 ___
