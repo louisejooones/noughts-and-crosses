@@ -43,7 +43,7 @@
                 <label for="single">One Player</label><br>
                 <input type="radio" id="two" name="game-type" value=2 checked>
                 <label for="two">Two Player</label><br>
-                <button id="player1-submit" type="submit">Let's go!</button>
+                <button id="player1-submit" aria-label="player1-submit" type="submit">Let's go!</button>
             </form>
             <div class="stats" id="player1-stats">
                 <h2 class="player-name hidden">Player 1</h2>
@@ -67,7 +67,7 @@
             </div>
             <div class="reset hidden">
                 <p class="outcome">Outcome message</p>
-                <button class="reset-button">Let's go!</button>
+                <button aria-label="reset-game" class="reset-button">Let's go!</button>
             </div>
         </section>
         <section class="player hidden" id="player2">
@@ -81,7 +81,7 @@
             <form class="player-form hidden" id="player2-form">
                 <label for="player2-name">What's your name?</label>
                 <input type="text" id="player2-name" placeholder="Player 2's name" required>
-                <button id="player2-submit" type="submit">Let's go!</button>
+                <button id="player2-submit" aria-label="player2-submit" type="submit">Let's go!</button>
             </form>
         </section>
     </main>
