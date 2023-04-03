@@ -28,7 +28,6 @@ function changeAudio() {
     iconClasses.add(audioOptions[audioChoice].iconClass);
     // update the volume
     audio.volume = audioOptions[audioChoice].volume;
-    
 }
 
 export { changeAudio };

@@ -88,15 +88,11 @@ main {
     justify-content: space-around;
 }
 
-main > * {
-    padding: 10px;
-}
-
 h1 {
     font-weight: 12;
     font-size: 50px;
-    margin:10px;
-    padding:0;
+    margin: 10px;
+    padding: 0;
     color: white
 }
 
@@ -108,10 +104,10 @@ h1 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 5fr 1fr;
     align-items: center;
-    padding: 5px 10px;
+    padding: 0 10px;
     border: 5px solid rgba(253, 250, 159, 1);
     line-height: 18px;
-    border-radius: 5px;;
+    border-radius: 5px;
 }
 
 .turn {
@@ -145,6 +141,11 @@ form {
     font-size: 12px;
 }
 
+input[type="text"] {
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
 .stats {
     grid-area: 2 / 1;
 }
@@ -167,9 +168,11 @@ form {
     grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
-    height: 400px;
+    height: 300px;
     padding: 0;
-    margin: 5px;
+    border-radius: 5px;
+    border: 5px solid rgba(253, 250, 159, 1);
+
 }
 
 h2 {
@@ -182,9 +185,6 @@ h2 {
     background-color: rgba(253, 250, 159, 1);
     background-position: 0 0, 10px 10px;
     background-size: 20px 20px;    
-    padding: 0.25rem;
-    border-radius: 40px;
-    border-radius: 4px;
 
     width: 300px;
     height: 300px;
@@ -215,26 +215,30 @@ h2 {
     height: 220px;
     grid-area: 1 / 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     text-decoration: none;
     color: #fff;
     background-color: #106836;
-    border-radius: 5px;;
+    border-radius: 5px;
     text-align: center;
-
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 .reset-button {
     position: relative;
-    font-size: 20px;
+    font-size: 15px;
     z-index: 4;
-    padding: 5px;
+    padding: 10px;
 }
 
 form button {
-    font-size: 15px;
+    font-size: 12px;
     padding: 3px;
     margin: 5px;
 }
@@ -245,6 +249,10 @@ form button {
 }
 
 @media screen and (max-width: 770px) {
+    body {
+        height: 100vh;
+    }
+    
     main {
         flex-direction: column;
     }
@@ -257,15 +265,9 @@ form button {
         font-size: 30px;
     }
 
-    .game {
-        width: 100%;
-        max-width: 300px;
-        max-height: 300px;
-    }
-
     .player {
         display: grid;
-        grid-template-rows: 150px;;
+        grid-template-rows: 150px;
         grid-template-columns: 1fr 5fr 1fr;
         align-items: center;
         padding: 5px 0;
@@ -273,6 +275,7 @@ form button {
         width: 300px;
         margin: 5px;
         font-size: 10px;
+        line-height: 14px;
     }
 
     form {
@@ -283,5 +286,11 @@ form button {
     .stats {
         grid-area: 1 / 2;
     }
+
+    .player-form label[for="single"],
+    .player-form label[for="two"] {
+        font-size: 10px;
+        margin-top: 0;
+}
     
 }
