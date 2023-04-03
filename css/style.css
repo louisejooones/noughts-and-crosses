@@ -97,7 +97,7 @@ h1 {
 }
 
 .player {
-    width: 170px;
+    width: 190px;
     height: 300px;
     background-color: rgba(254, 253, 232, 0.704);
     display: grid;
@@ -142,8 +142,13 @@ form {
 }
 
 input[type="text"] {
+    max-width: 80%;
     border-radius: 5px;
     margin-top: 5px;
+    padding: 3px 0;
+    font-size: 9px;
+    text-align: center;
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 .stats {
