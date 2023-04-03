@@ -19,14 +19,25 @@ document.querySelector('.audio-control').addEventListener('click', (event) => {
     changeAudio(event);
 });
 
+// Function to get player's name
+function getName(player, playerNum) {
+    // Take the player's name from the user input fields
+    let pName = document.querySelector(`#player${playerNum}-name`).value;
+    if (pName.length > 0) {
+        player.name = pName;
+    }
+    else {
+        player.name = `Mystery Player ${playerNum}`;
+    }
+}
 
 
 // Event listener for first player form
 document.querySelector('#player1-submit').addEventListener('click', function(event) {
     // Stop the page from refreshing
     event.preventDefault();
-    // Take the player's name from the user input fields
-    player1.name = document.querySelector("#player1-name").value;
+    // Get the player's name
+    getName(player1, 1);
     // Update stats
     updateStats();
     // Hide the Player 1 form
@@ -56,7 +67,7 @@ document.querySelector('#player2-submit').addEventListener('click', function(eve
     // Stop the page from refreshing
     event.preventDefault();
     // Take the player's name from the user input fields
-    player2.name = document.querySelector("#player2-name").value;
+    getName(player2, 2);
     // Hide player 2 form
     document.querySelector('#player2-form').classList.add('hidden');
     // Show Player 2's stats
@@ -87,9 +98,9 @@ function updateStats() {
             document.querySelector(`#${player.playerNumber}-stats > .player-name`).innerText = player.name;
             // Update game stats
             document.querySelector(`#${player.playerNumber}-stats > .game-stats`).innerText =
-                `Wins: ${player.wins}
-                Losses: ${player.losses}
-                Draws: ${player.draws}`; 
+                `${player.wins}  wins
+                ${player.losses}  losses
+                ${player.draws}  draws`; 
         }
     })
 };

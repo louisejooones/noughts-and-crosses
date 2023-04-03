@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noughts and Crosses</title>
     <link rel="icon" sizes="any" href="favicon.ico"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
     <link rel="stylesheet" href="css/style.css"/>
     <script defer src="js/game.js" type="module"></script>
     <script src="https://kit.fontawesome.com/786fe5a83c.js" crossorigin="anonymous"></script>
@@ -18,13 +21,13 @@
         <nav>
             <ul>
                 <li><a href="#">More games</a></li>
-                <li><a href="#">Repo</a></li>
+                <li><a href="https://github.com/louisejones94/noughts-and-crosses">Repo</a></li>
                 <li><a href="#">Contact me</a></li>
                 <li>
                     <audio id="summer-audio" autoplay loop>
                         <source src="./audio/birds-in-woods.mp3" type="audio/mpeg">
                     </audio>
-                    <a href="#" class="audio-control"><i class="fa-solid fa-volume-xmark"></i>&nbsp;&nbsp;&nbsp;&nbsp;Audio</a>
+                    <a href="#" class="audio-control"><i class="fa-solid fa-volume-xmark"></i>Audio</a>
                 </li>
             </ul>
             
@@ -33,11 +36,11 @@
     <main>
         <section class="player" id="player1">
             <form class="player-form" id="player1-form">
-                <label for="player1-name">What's your name?</label>
-                <input type="text" id="player1-name" placeholder="Player 1's name" required/>
-                <p>What type of game do you want to play?</p>
+                <label for="player1-name">Who are you?</label>
+                <input type="text" id="player1-name" name="player1-name" placeholder="Player 1's name" required />
+                <p>Mode</p>
                 <input type="radio" id="single" name="game-type" value=1>
-                <label for="single">Single Player</label><br>
+                <label for="single">One Player</label><br>
                 <input type="radio" id="two" name="game-type" value=2 checked>
                 <label for="two">Two Player</label><br>
                 <button id="player1-submit" type="submit">Let's go!</button>
@@ -46,7 +49,7 @@
                 <h1 class="player-name hidden">Player 1</h1>
                 <h3 class="turn hidden" id="player1-turn">Your turn!</h3>
                 <p class="game-stats hidden" id="player1-game-stats">
-                    Wins: 0<br>Losses: 0<br>Draws: 0
+                    0 wins<br>0 losses<br>0 draws
                 </p>
             </div>
         </section>
@@ -72,22 +75,21 @@
                 <h1 class="player-name hidden">Player 2</h1>
                 <h3 class="turn hidden" id="player2-turn">Your turn!</h3>
                 <p class="game-stats hidden" id="player2-game-stats">
-                    Wins: 0<br>Losses: 0<br>Draws: 0
+                    0 wins<br>0 losses<br>0 draws
                 </p>
             </div>
             <form class="player-form hidden" id="player2-form">
                 <label for="player2-name">What's your name?</label>
-                <input type="text" id="player2-name" placeholder="Player 2's name" required/>
+                <input type="text" id="player2-name" placeholder="Player 2's name" required />
                 <button id="player2-submit" type="submit">Let's go!</button>
             </form>
         </section>
     </main>
     <footer>
         &copy; Louise Jones 2023
-        <a href="https://www.freepik.com/free-vector/farm-scene-nature-with-barn_5769442.htm#query=cartoon%20farm&position=0&from_view=keyword&track=ais">Image by brgfx</a> on Freepik
-        <a href="https://www.freepik.com/free-vector/natural-environment-lanscape-scene_5072764.htm#query=field&position=22&from_view=search&track=sph">Image by brgfx</a> on Freepik
-        Image by <a href="https://www.freepik.com/free-vector/hand-drawn-spring-wallpaper_12151052.htm#query=grass&position=30&from_view=search&track=sph">Freepik</a>
-        Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=16850">Pixabay</a>
-        <a href="https://www.freepik.com/free-vector/green-garden-frame-background-with-copyspace_4607345.htm#query=grass%20birds%20eye%20view&position=1&from_view=keyword&track=ais">Image by brgfx</a> on Freepik    </footer>
+        Background by <a href="https://www.freepik.com/free-vector/hand-drawn-spring-landscape_12239773.htm#query=spring%20forest&position=7&from_view=search&track=ais">Freepik</a>
+        Audio by <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=16850">Pixabay</a>
+        Game squares by <a href="https://www.freepik.com/free-vector/green-garden-frame-background-with-copyspace_4607345.htm#query=grass%20birds%20eye%20view&position=1&from_view=keyword&track=ais">brgfx on Freepik</a> 
+    </footer>
 </body>
 </html>
