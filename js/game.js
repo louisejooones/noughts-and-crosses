@@ -16,6 +16,7 @@ let squares = Array.from(document.querySelector('.game-board').children);
 document.querySelector('#summer-audio').volume = 0;
 document.querySelector('.audio-control').addEventListener('click', (event) => {
     event.preventDefault();
+    console.log('You clicked on audio')
     changeAudio(event);
 });
 

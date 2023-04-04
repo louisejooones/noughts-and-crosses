@@ -8,20 +8,30 @@ Project 1 runs from 29th March - 3rd April (4 working days) and is an independen
 
 ___
 
-## Deployment link
+## Deployment
 
-Github pages: https://louisejones94.github.io/noughts-and-crosses/
+[Play now via Github Pages](https://louisejones94.github.io/noughts-and-crosses/)
 
 
 ___
 ## Technologies Used
 
 - HTML
+    - Semantic tags
 - CSS
+    - Flexbox
+    - Grid
 - JavaScript
+    - Classes 
+    - DOM manipulation
 - VS Code
+    - Text editing
+    - Accessing Git via CLI
 - Chrome developer tools
-
+    - Inspecting elements, layout etc
+    - Debugging
+- Calligraphr
+    - Font design
 
 
 ___
@@ -66,6 +76,8 @@ ___
 - As a user, I should be shown a message when I win, lose or tie
 - As a user, I should not be able to continue playing once I win, lose, or tie
 - As a user, I should be able to play the game again without refreshing the page
+- As a user, I should be able to give my name so I can track my score
+- As a user, I should be able to choose to play in one-player or two-player mode
 
 ### Wireframe
 
@@ -74,56 +86,51 @@ ___
 I used this [Trello board](https://trello.com/b/myM3qWxN) to list out different features, order them in terms of priority then set up each day's work to make sure I was moving through the content at enough pace.
 
 
-
 ___
 ## Build/Code Process
 
-> The Build/Code Process will be the longest section of your ReadMe and will be most insightful to the engineers that review them. This is where you will discuss the steps you took to code the project.
-> 
-> You want to see your ReadMes as a way to walk the engineers through your approach and problem solving from the start of the project through to the end.
-> 
-> You'll need to include a minimum of 3-4 code snippets, highlighting code you're particularly proud of and these code snippets will have descriptions on what you did, how and why to set the context of the snippet you include. These explanations are important for the engineers, as they will want to understand what you did and the reasoning behind the steps you took.
-> 
-> You don't need to document every single thing you coded, but walk them through the key sections of the project build.
-> 
-> Some people will document the build/code process by discussing the key stages they worked on. Others will do a day by day guide. It’s entirely up to you how you structure this, as long as you discuss all the key things above.
-
 ### 
-- First things first, holy grail layout
-- Then, basic board layout
-- Started with classes for players and the game itself (Scoreboard)
-- Centred work around the game.js file
-- Functions for each repeated step
-
-
+1. First things first, I wanted to get the holy grail layout in place, to practice using Flexbox whilst the content was extremely simple, as I felt less confident using this
+2. I built the basic board layout using a Grid structure to have something visual to 
+3. I made classes for players and the game itself (Scoreboard) to keep track of multiple pieces of information without making lots of individual variables
+4. *Mild distraction* I wanted to have unique icons for my game
+5. Centred work around the game.js file
+    - Functions for basic game play
+        - Automatically assigned player 1 and player 2
+        - Enabled clicking on squares
+        - Restricted clicking on filled squares
+    - Game outcome logic
+6. Functions for each repeated step (DRY)
+7. Validation
+    - HTML
+    - CSS
+    - Accessibility
 
 ___
 ## Challenges
 
-> Challenges are great for showing your learning journey and problem solving, and this is a section that many engineers will check out. Every day of your engineering career you’ll encounter challenges, this is part of your growth and development. It’s the challenges you encounter that helps you become a stronger and more competent engineer. 
-> 
-> Here you will detail any particular challenges you encountered as you were coding the project. 
+### A simple solution to a time-consuming problem!
 
+I was initially lost in over-complicating the problem of showing whose turn it is right now. Effectively I was writing the logic that sits behind toggling a class:
 
+```js
+function showTurn() {
+    players.forEach(function(player) {
+        // if the player's name matches the current player's name
+        if (player.name === scoreboard.currentPlayer.name) {
+            document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-stats > h3`).classList.add('hidden');
+            document.querySelector(`#${scoreboard.otherPlayer.playerNumber}-stats > h3`).classList.remove('hidden');
+        }
+        else {
+            document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-stats > h3`).classList.remove('hidden');
+            document.querySelector(`#${scoreboard.otherPlayer.playerNumber}-stats > h3`).classList.add('hidden');
+        }
+    })
+}
+```
 
-> Questions to answer here:
-> 
-> What technical challenges did you come across? 
-> Why were these challenges? 
-> What problem solving did you do to rectify them?
-> Team dynamics/ Project management
-> Tools/Tech you used
+Applying the principle of KISS, and taking some time away from the problem, allowed me to realise that I could simply toggle the class for each of the players, without needing to sort through who was the current player:
 
-Toggling the class list!
-        // // if the player's name matches the current player's name
-        // if (player.name === scoreboard.currentPlayer.name) {
-        //     document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-stats > h3`).classList.add('hidden');
-        //     document.querySelector(`#${scoreboard.otherPlayer.playerNumber}-stats > h3`).classList.remove('hidden');
-        // }
-        // else {
-        //     document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-stats > h3`).classList.remove('hidden');
-        //     document.querySelector(`#${scoreboard.otherPlayer.playerNumber}-stats > h3`).classList.add('hidden');
-        // }
 ```js
 function showTurn() {
     players.forEach(function(player) {
@@ -132,8 +139,9 @@ function showTurn() {
 }
 ```
 
-- Feeling the urge to jump straight in and start coding
-- Trying to choose which bonus exercises to work through / comparing myself to others
+### Comparison is the thief of joy
+
+Trying to choose which bonus exercises to work through with limited time tested my
 
 ___
 ## Wins
@@ -147,27 +155,14 @@ ___
 > Collaboration with other team members
 > Visual design of the project
 
-- My game logic
+### Game outcome logic
 
 
 ___
-## Key Learnings/Takeaways
-
-> This section is one of the other most important parts of your ReadMe from an engineers’ perspective and helps to differentiate each of you from your classmates and team members. 
-> 
-> Engineers love to understand what you learn from each project and how it has shaped you as an engineer. 
-> 
-> See this as your opportunity to show the engineers how your skills grew during each project sprint. 
-
-> Things you could discuss here:
-> 
-> What Technologies/Tools do you now feel more confident with? Tell them specifically what you learnt about these. 
-> What engineering processes did you become more comfortable with? Standups? Pair programming? Project management? Tell them what you learnt from these processes?
+## Other Learnings/Takeaways
 
 - Flexbox: I went into this project seeing Flexbox as my nemesis. Much like when I learnt to drive, I thought "I'm just not suited to this, I'll never find this easy". And much like driving, I don't find it easy as such, but I can find myself doing a good job whilst on autopilot. Here, I noticed myself centring the Game Outcome message using Flexbox without looking it up, and getting the right result first time.
-- Debugging
-- Stepping away from a problem
-- Sketching out logical processes
+- Debugging: I feel much happier with hitting errors and having a logical way to locate, identify and test possible solutions for the problem.
 
 
 
