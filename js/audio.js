@@ -14,7 +14,6 @@ const audio = document.querySelector('#summer-audio');
 
 // Change audio volume on button click
 function changeAudio() {
-    console.log('You reached the function')
     // remove the current class for the icon
     let iconClasses = document.querySelector('.audio-control').firstChild.classList;
     iconClasses.remove(audioOptions[audioChoice].iconClass);
