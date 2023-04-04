@@ -205,7 +205,7 @@ ___
 ## Bugs
 
 - Favicon compatibility: iOS Safari and classic desktop browsers are covered, but Android Chrome and Edge/IE12 require different formats that I haven't yet added (2nd April)
-- Audio seems to only work intermittently, potentially my audio loop is not working correctly (4th April)
+- Audio seems to only work on localhost and not in Github pages, potentially my audio loop is not working correctly (4th April)
 
 ___
 ## Future Improvements
