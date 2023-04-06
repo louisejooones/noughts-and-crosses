@@ -5,6 +5,7 @@ import { changeAudio } from "./audio.js";
 // Initialise players
 let player1 = new Player('', 'X', 'player1');
 let player2 = new Player('', 'O', 'player2');
+let players = [player1, player2];
 
 // Initialise scoreboard
 let scoreboard = new Scoreboard();
@@ -68,14 +69,9 @@ document.querySelector('#player2-submit').addEventListener('click', function(eve
     resetGame();
 });
 
-let players = [player1, player2];
 
-// Function to show whose turn it is
-function showTurn() {
-    players.forEach(function(player) {
-        document.querySelector(`#${player.playerNumber}-turn`).classList.toggle('hidden');
-    })
-}
+
+
 
 // Function to choose random index
 function chooseRandIndex(num) {
@@ -193,7 +189,7 @@ document.querySelector('.game-board').addEventListener('click', (event) => {
                 scoreboard.currentPlayer = scoreboard.currentPlayer === player1 ? player2 : player1;
                 // Change turn number
                 scoreboard.turnNumber++;
-                showTurn();
+                players.forEach((player) => player.showTurn());
             }
             // else end the game
             else {

@@ -21,6 +21,11 @@ class Player {
             this.name = `Mystery Player ${this.playerNumber[6]}`;
         }
     }
+
+    // Method to show whose turn it is
+    showTurn() {
+            document.querySelector(`#${this.playerNumber}-turn`).classList.toggle('hidden');
+    }
 };
 
 export { Player };
