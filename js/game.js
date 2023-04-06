@@ -1,6 +1,7 @@
 import { Player } from "./player.js";
 import { Scoreboard } from "./scoreboard.js";
 import { changeAudio } from "./audio.js";
+import { squares, chooseRandIndex, whichIndex } from "./helpers.js";
 
 // Initialise players
 let player1 = new Player('', 'X', 'player1');
@@ -10,18 +11,12 @@ let players = [player1, player2];
 // Initialise scoreboard
 let scoreboard = new Scoreboard();
 
-// Array of all the squares from the parent node
-let squares = Array.from(document.querySelector('.game-board').children);
-
 // Controls for audio
 document.querySelector('#summer-audio').volume = 0;
 document.querySelector('.audio-control').addEventListener('click', (event) => {
     event.preventDefault();
     changeAudio(event);
 });
-
-
-
 
 // Event listener for first player form
 document.querySelector('#player1-submit').addEventListener('click', function(event) {
@@ -68,17 +63,6 @@ document.querySelector('#player2-submit').addEventListener('click', function(eve
     player2info.forEach((stat) => stat.classList.remove('hidden'));
     resetGame();
 });
-
-
-
-
-
-// Function to choose random index
-function chooseRandIndex(num) {
-    return Math.floor(Math.random() * num);
-}
-
-
 
 
 // Function to start a new game
@@ -147,11 +131,7 @@ function isItOverYet(player) {
     }
 }
 
-// Function to find the index of the square that was clicked
-function whichIndex(event) {
-    // Find the index of which button you clicked on
-    return squares.indexOf(event.target);
-};
+
 
 // Add one event listener that covers the whole game board
 document.querySelector('.game-board').addEventListener('click', (event) => {
