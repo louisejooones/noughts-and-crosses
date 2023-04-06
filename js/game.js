@@ -19,17 +19,7 @@ document.querySelector('.audio-control').addEventListener('click', (event) => {
     changeAudio(event);
 });
 
-// Function to get player's name
-function getName(player, playerNum) {
-    // Take the player's name from the user input fields
-    let pName = document.querySelector(`#player${playerNum}-name`).value;
-    if (pName.length > 0) {
-        player.name = pName;
-    }
-    else {
-        player.name = `Mystery Player ${playerNum}`;
-    }
-}
+
 
 
 // Event listener for first player form
@@ -37,7 +27,7 @@ document.querySelector('#player1-submit').addEventListener('click', function(eve
     // Stop the page from refreshing
     event.preventDefault();
     // Get the player's name
-    getName(player1, 1);
+    player1.getName();
     // Update stats
     updateStats();
     // Hide the Player 1 form
@@ -69,7 +59,7 @@ document.querySelector('#player2-submit').addEventListener('click', function(eve
     // Stop the page from refreshing
     event.preventDefault();
     // Take the player's name from the user input fields
-    getName(player2, 2);
+    player2.getName();
     // Hide player 2 form
     document.querySelector('#player2-form').classList.add('hidden');
     // Show Player 2's stats
@@ -149,25 +139,28 @@ function isItOverYet(player) {
     winningPositions.forEach(function(position) {
         if (position.every((indx) => playerPositions.includes(indx))) {
         scoreboard.winner = player;
-        // Log the winner
+        // Log the outcome
         document.querySelector('.reset > .outcome').innerText = 
             `${player.name} wins and
             ${scoreboard.otherPlayer.name} loses.
 
             Want to play again?`;
+        // Increment the scoreboard with the game results
         scoreboard.currentPlayer.wins++;
         scoreboard.otherPlayer.losses++;
         }
     })
     // Finally see if we have a draw
     if (!scoreboard.winner && scoreboard.turnNumber === 8) {
-        scoreboard.draw = 1;
-        scoreboard.currentPlayer.draws++;
-        scoreboard.otherPlayer.draws++;
+        // Log the outcome
         document.querySelector('.reset > .outcome').innerText = 
             `It's a draw!
 
             Want to play again?`;
+        // Increment the scoreboard with the game results
+        scoreboard.draw = 1;
+        scoreboard.currentPlayer.draws++;
+        scoreboard.otherPlayer.draws++;
     }
 }
 

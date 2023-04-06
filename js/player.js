@@ -8,6 +8,19 @@ class Player {
         this.draws = 0;
         this.positions = [];
     }
+
+    // Method to get player's name
+    getName() {
+        // Take the player's name from the user input fields
+        let pName = document.querySelector(`#${this.playerNumber}-name`).value;
+        if (pName.length > 0) {
+            this.name = pName;
+        }
+        // Or give them a mysterious name if they didn't choose one!
+        else {
+            this.name = `Mystery Player ${this.playerNumber[6]}`;
+        }
+    }
 };
 
 export { Player };
