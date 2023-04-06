@@ -26,6 +26,20 @@ class Player {
     showTurn() {
             document.querySelector(`#${this.playerNumber}-turn`).classList.toggle('hidden');
     }
+
+    // Method to update stats after each turn
+    updateStats() {
+        // Don't update until the players have both chosen their name
+        if (this.name.length > 0) {
+            // Update player name
+            document.querySelector(`#${this.playerNumber}-stats > .player-name`).innerText = this.name;
+            // Update game stats
+            document.querySelector(`#${this.playerNumber}-stats > .game-stats`).innerText =
+                `${this.wins}  wins
+                ${this.losses}  losses
+                ${this.draws}  draws`;
+        }
+    }
 };
 
 export { Player };

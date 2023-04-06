@@ -29,8 +29,8 @@ document.querySelector('#player1-submit').addEventListener('click', function(eve
     event.preventDefault();
     // Get the player's name
     player1.getName();
-    // Update stats
-    updateStats();
+    // Update statsƒ
+    players.forEach((player) => player.updateStats());
     // Hide the Player 1 form
     document.querySelector('#player1-form').classList.add('hidden');
     // Show Player 1's stats
@@ -78,20 +78,7 @@ function chooseRandIndex(num) {
     return Math.floor(Math.random() * num);
 }
 
-// Function to update stats after each turn
-function updateStats() {
-    players.forEach((player) => {
-        if (player.name.length > 0) {
-            // Update player name
-            document.querySelector(`#${player.playerNumber}-stats > .player-name`).innerText = player.name;
-            // Update game stats
-            document.querySelector(`#${player.playerNumber}-stats > .game-stats`).innerText =
-                `${player.wins}  wins
-                ${player.losses}  losses
-                ${player.draws}  draws`; 
-        }
-    })
-};
+
 
 
 // Function to start a new game
@@ -119,7 +106,7 @@ function resetGame() {
         scoreboard.currentPlayer = players[randIndex];
         scoreboard.otherPlayer = players[1-randIndex];
         // Update all the player stats
-        updateStats();
+        players.forEach((player) => player.updateStats());
         // Show whos turn it is first
         document.querySelector(`#${scoreboard.currentPlayer.playerNumber}-turn`).classList.toggle('hidden');
     }
@@ -194,7 +181,8 @@ document.querySelector('.game-board').addEventListener('click', (event) => {
             // else end the game
             else {
                 squares.forEach((square) => square.classList.remove('empty'));
-                updateStats();
+                // Update all the player stats
+                players.forEach((player) => player.updateStats());
                 document.querySelector('.reset').classList.remove('hidden');
                 document.querySelectorAll('h3').forEach((heading) => heading.classList.add('hidden'));
             }
