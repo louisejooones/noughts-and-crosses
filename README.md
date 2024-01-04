@@ -10,7 +10,7 @@ ___
 
 ## Deployment
 
-[Play now via Github Pages](https://louisejones94.github.io/noughts-and-crosses/)
+[Play now via Github Pages](https://louisejooones.github.io/noughts-and-crosses/)
 
 
 ___
